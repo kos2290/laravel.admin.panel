@@ -53,3 +53,7 @@ $response = tap($kernel->handle(
 ))->send();
 
 $kernel->terminate($request, $response);
+
+require __DIR__ . '/../config/init.php';
+require __DIR__ . '/../config/params.php';
+new \App\SBlog\Core\BlogApp();
